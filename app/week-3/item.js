@@ -1,10 +1,19 @@
-export default function Item({ name, quantity, category }) {
+import React from 'react';
+
+const Item = ({ name, quantity, category }) => {
   return (
-    <li className="p-2 border-b border-gray-200 flex justify-between items-center">
-      <span className="font-medium">{name}</span>
-      <span className="text-sm text-gray-600">x{quantity}</span>
-      <span className="text-xs text-gray-500 italic">{category}</span>
+    <li className="p-4 mb-3 bg-gray-900 rounded-lg border border-gray-700">
+      <div className="flex justify-between items-center">
+        <span className="font-medium text-white text-lg">{name}</span>
+      </div>
+      <div className="text-gray-300 mt-1">
+        Buy {quantity} in <span className="text-gray-400">{category}</span>
+      </div>
     </li>
   );
-}
+};
+
+export default Item;
+
+
 
